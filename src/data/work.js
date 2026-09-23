@@ -16,9 +16,10 @@ export const STATUS = {
   DEMO: 'Demo',
   IN_DEVELOPMENT: 'In Development',
   PROTOTYPE: 'Prototype / Pre-Pilot',
+  PILOT: 'Pilot',
 };
 
-export const workCategories = ['All', 'AI', 'SaaS', 'Websites', 'Automation', 'Education', 'Other'];
+export const workCategories = ['All', 'AI', 'SaaS', 'Websites', 'Automation', 'Education', 'Other', 'Equatorial Guinea'];
 
 export const workProjects = [
   {
@@ -128,7 +129,35 @@ export const workProjects = [
     icon: '🎬',
     description: 'An entertainment platform spotlighting young talent from Equatorial Guinea — challenges, social experiences, and original content.',
     tags: ['Media', 'Entertainment'],
+    region: 'Equatorial Guinea',
     liveUrl: 'https://ecuazone.cabreraai.com',
+    featured: false,
+  },
+  {
+    id: 10,
+    slug: 'ecohealth-ai-gq',
+    name: 'EcoHealth AI GQ',
+    category: 'AI',
+    status: STATUS.PILOT,
+    icon: '🌍',
+    description: 'A pilot-stage medical travel coordination concept connecting patients in Equatorial Guinea with specialist care in Tunisia, supporting case intake, clinic matching, and travel logistics.',
+    tags: ['Health', 'Medical Travel', 'Equatorial Guinea'],
+    region: 'Equatorial Guinea',
+    liveUrl: 'https://ecohealth-ai-gq.netlify.app',
+    featured: false,
+    disclaimer: 'Pilot program. EcoHealth AI does not diagnose or provide treatment. Medical decisions, diagnosis, and treatment remain with qualified healthcare professionals.',
+  },
+  {
+    id: 11,
+    slug: 'ecomar-guinea',
+    name: 'ECOMAR',
+    category: 'Websites',
+    status: STATUS.LIVE,
+    icon: '🏗️',
+    description: 'A company website built for ECOMAR, a construction and rehabilitation contractor operating in Equatorial Guinea, showcasing services and projects with direct WhatsApp-based client enquiries.',
+    tags: ['Construction', 'Business Website', 'Equatorial Guinea'],
+    region: 'Equatorial Guinea',
+    liveUrl: 'https://ecomar-guinea.netlify.app',
     featured: false,
   },
 ];

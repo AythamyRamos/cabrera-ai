@@ -8,7 +8,7 @@ export default function Work() {
 
   const filtered = activeCategory === 'All'
     ? workProjects
-    : workProjects.filter(p => p.category === activeCategory);
+    : workProjects.filter(p => activeCategory === 'Equatorial Guinea' ? p.region === 'Equatorial Guinea' : p.category === activeCategory);
 
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 animate-fade-in">
