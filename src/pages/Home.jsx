@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, ChevronRight, Layers, ShoppingBag, Wrench, BookMarked, CheckCircle, BookmarkCheck, Search, Zap } from 'lucide-react';
+import { ArrowRight, ChevronRight, Layers, ShoppingBag, Wrench, BookMarked, CheckCircle, BookmarkCheck, Search, Zap, Briefcase } from 'lucide-react';
 import { useStore } from '../context/StoreContext';
 import ToolCard from '../components/ToolCard';
+import WorkCard from '../components/WorkCard';
 import Logo from '../components/Logo';
+import { featuredWork } from '../data/work';
 
 const categories = [
   { name: 'Productivity', icon: '⚡', count: 12 },
@@ -169,6 +171,30 @@ export default function Home() {
           </div>
           <div className="sm:hidden mt-6 text-center">
             <Link to="/tools" className="text-sm text-blue-400 font-medium">View all tools →</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SELECTED WORK ─────────────────────── */}
+      <section className="py-24 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-4">
+            <p className="label-tag mb-2.5">Selected Work</p>
+            <h2 className="text-[1.875rem] font-bold text-white tracking-tight mb-3">
+              Beyond the library — things we've built
+            </h2>
+            <p className="text-[14px] text-white/40 max-w-xl mx-auto leading-relaxed">
+              Cabrera AI doesn't only collect AI tools. We design and build useful AI products,
+              web applications, business platforms, and automation.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
+            {featuredWork.map(project => <WorkCard key={project.id} project={project} />)}
+          </div>
+          <div className="mt-8 text-center">
+            <Link to="/work" className="btn-ghost gap-2 inline-flex">
+              <Briefcase className="w-4 h-4" /> See all our work
+            </Link>
           </div>
         </div>
       </section>
