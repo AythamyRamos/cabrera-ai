@@ -42,6 +42,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {[
                 { label: 'Browse Tools', path: '/tools' },
+                { label: 'Our Work', path: '/work' },
                 { label: 'Marketplace', path: '/marketplace' },
                 { label: 'Request a Tool', path: '/request' },
                 { label: 'My Library', path: '/library' },
