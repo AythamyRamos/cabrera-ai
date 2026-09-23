@@ -3,6 +3,7 @@ import { StoreProvider } from './context/StoreContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import Work from './pages/Work';
 import Tools from './pages/Tools';
 import ToolDetail from './pages/ToolDetail';
 import Marketplace from './pages/Marketplace';
@@ -32,6 +33,7 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/"               element={<Layout path="/"><Home /></Layout>} />
+          <Route path="/work"           element={<Layout path="/work"><Work /></Layout>} />
           <Route path="/tools"          element={<Layout path="/tools"><Tools /></Layout>} />
           <Route path="/tools/:slug"    element={<Layout path="/tools"><ToolDetail /></Layout>} />
           <Route path="/marketplace"    element={<Layout path="/marketplace"><Marketplace /></Layout>} />
